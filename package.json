@@ -1,0 +1,11 @@
+{
+  "name": "@thomasperi/umd-pullup",
+  "version": "1.0.0",
+  "description": "A gulp-umd template that preserves the source file's line numbers",
+  "main": "pullup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Peri",
+  "license": "MIT"
+}
