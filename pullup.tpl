@@ -10,7 +10,7 @@ return <%= exports %>;
 <% } %>
 
 }, function (factory, root) {
-	/*global require, define, exports, module */
+	/*global define, exports, module */
 	'use strict';
 	
 	var library,
@@ -48,9 +48,13 @@ return <%= exports %>;
 		// If the library doesn't define its own `noConflict` method,
 		// define a new one that reverts the property on the root object
 		// and returns the library for reassignment.
-		if (hasOriginal && !library[hop](noc)) {
+		if (!library[hop](noc)) {
 			library[noc] = function () {
-				root[n] = original;
+				if (hasOriginal) {
+					root[n] = original;
+				} else {
+					delete root[n];
+				}
 				return library;
 			};
 		}
