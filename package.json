@@ -1,6 +1,6 @@
 {
   "name": "@thomasperi/umd-pullup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A gulp-umd template that preserves the source file's line numbers",
   "main": "pullup.js",
   "scripts": {
