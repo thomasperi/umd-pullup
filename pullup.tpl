@@ -55,6 +55,12 @@ return <%= exports %>;
 				} else {
 					delete root[n];
 				}
+				// Once noConflict has been called once, replace it with a new
+				// function that just returns the library, to avoid unexpected
+				// consequences if it's accidentally called again.
+				library[noc] = function () {
+					return library;
+				};
 				return library;
 			};
 		}
