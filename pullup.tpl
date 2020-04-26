@@ -11,14 +11,8 @@ return <%= exports %>;
 
 }, function (factory, root) {
 	'use strict';
-	/*global define, exports, module, require */
-	
-	// If dependencies are listed in the gulp-umd file, this script will call
-	// Node's `require` function. If no dependencies are listed, it won't.
-	// But jshint doesn't know that, which creates a catch-22 with the global
-	// comment above. Voiding it here keeps it around for jshint and only adds
-	// eight bytes to the minified file.
-	void require;
+	/*global define, exports, module */
+	<% if (cjs) { %>/*global require */<% } %>
 	
 	var library,
 		original,
