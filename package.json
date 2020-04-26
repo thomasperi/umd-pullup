@@ -4,7 +4,7 @@
   "description": "A gulp-umd template that preserves the source file's line numbers",
   "main": "pullup.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
     "postversion": "git push && git push --tags"
   },
   "author": "Thomas Peri",
